@@ -1,16 +1,17 @@
+version: "2.5"
 services:
-  fairseq:
+  bert:
     build: .
     volumes:
       - type: bind
-        source: "/work00"
-        target: "/work00"
+        source: "/work01/masaki/model/"
+        target: "/model"
       - type: bind
-        source: "./fairseq"
-        target: "/code/fairseq"
+        source: "/work01/masaki/data/"
+        target: "/data"
       - type: bind
-        source: "./shell"
-        target: "/code/shell"
+        source: "/home/masaki/Geo-Ent-in-BERT"
+        target: "/code/Geo-Ent-in-BERT"
     tty: true
     shm_size: '2gb'
     environment:
@@ -25,3 +26,5 @@ services:
               # e.g., otherwise: 0, 1, 2, 3
               device_ids: ['0', '1', '2', '3']
               capabilities: [gpu]
+    ports:
+      - "8888:49999"
