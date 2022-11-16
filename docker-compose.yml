@@ -27,4 +27,4 @@ services:
               device_ids: ['0', '1', '2', '3']
               capabilities: [gpu]
     ports:
-      - "8888:49999"
+      - "50000:8888"
