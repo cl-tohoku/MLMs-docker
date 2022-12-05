@@ -17,7 +17,7 @@ docker compose up -d
 
 # attach to running container
 # **コンテナの名前は適宜 docker ps で確認すること**
-docker exec -it your_container_name bash
+docker exec -it bert-en-on-docker-bert-1 bash
  
 ```
 

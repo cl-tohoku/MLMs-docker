@@ -23,6 +23,7 @@ pip install jupyterlab
 pip install umap-learn
 pip install bokeh
 pip install datasets
+python3 -m spacy download en_core_web_sm
 echo 'done.'
 
 bash
