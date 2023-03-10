@@ -1,6 +1,8 @@
-# BERT-en-on-docker
+# MLMs-docker
 
-英語版BERTをDocker上で動かすためのレポジトリ
+This repository is designed for running MLMs (Masked Language Models) on Docker.
+
+
 
 # How to start container
 
@@ -16,8 +18,7 @@ docker compose build
 docker compose up -d
 
 # attach to running container
-# **コンテナの名前は適宜 docker ps で確認すること**
-docker exec -it bert-en-on-docker-bert-1 bash
+docker exec -it  mlms-docker-bert-1 bash
  
 ```
 
@@ -32,7 +33,7 @@ docker exec -it bert-en-on-docker-bert-1 bash
 ```
 
 - The following containers are bind mounted
-  - `/home/<your_username>/Geo-Ent-in-BERT` 
-  - `/work01/<your_username>/data` 
-  - `/work01/<your_username>/modelo` 
+  - `/home/<your_username>/Geo-Ent-in-LMs` 
+  - `/work/<your_username>/data` 
+  - `/work/<your_username>/model` 
 

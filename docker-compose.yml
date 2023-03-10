@@ -4,14 +4,14 @@ services:
     build: .
     volumes:
       - type: bind
-        source: "/work01/masaki/model/"
+        source: "/work/$HOST_USERNAME/model/"
         target: "/model"
       - type: bind
-        source: "/work01/masaki/data/"
+        source: "/work/$HOST_USERNAME/data/"
         target: "/data"
       - type: bind
-        source: "/home/masaki/Geo-Ent-in-BERT"
-        target: "/code/Geo-Ent-in-BERT"
+        source: "/home/$HOST_USERNAME/Geo-Ent-in-LMs"
+        target: "/code/Geo-Ent-in-LMs"
     tty: true
     shm_size: '2gb'
     environment:
@@ -26,5 +26,3 @@ services:
               # e.g., otherwise: 0, 1, 2, 3
               device_ids: ['0', '1', '2', '3']
               capabilities: [gpu]
-    ports:
-      - "50000:8888"
