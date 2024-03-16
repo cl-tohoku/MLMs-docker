@@ -23,7 +23,18 @@ pip install jupyterlab
 pip install umap-learn
 pip install bokeh
 pip install datasets
+pip install sentencepiece
+pip install python-Levenshtein
+pip install thefuzz
+pip install thefuzz[speedup]
+pip install fasttext
+pip install fastcluster
+pip install openpyxl
+pip install accelerate
 python3 -m spacy download en_core_web_sm
+pip install -U contextualized_topic_models
+pip install openai
+pip install fire
 echo 'done.'
 
 bash
